@@ -1,0 +1,38 @@
+program Nilai_data;
+uses crt;
+Var
+i,N,max,min : integer; 
+Data:array[1..100] of integer;
+Rata,Total : real;
+ 
+begin
+
+write('Masukan Banyak Data : ');readln(N);
+writeln;
+for i:=1 to N do
+begin
+write('Nilai ke ',i,' : ');readln(Data[i]);
+Total:=Total+Data[i];
+Rata:=Total/N;
+end;
+
+begin
+max := data[i];
+min := data[i];
+for i := 1 to N do
+begin
+if(max < data[i]) then
+max := data[i];
+ 
+if(min > data[i]) then
+min := data[i];
+end;
+end;
+
+writeln;
+writeln('Nilai Max        : ',max);
+writeln('Nilai Min        : ',min);
+writeln('Nilai Rata-rata  : ',Rata:2:2);
+
+readkey;
+end.
